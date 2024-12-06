@@ -1,7 +1,13 @@
-export default function Home() {
+import React from "react";
+import Menu from "@/components/Menu";
+
+const Home = () => {
   return (
-    <h1 className="text-3xl font-bold underline">
-      Hello world!
-    </h1>
-  )
-}
+    <main className="h-screen w-screen bg-primary flex text-white gap-10">
+      <Menu />
+      <div className="bg-primary">test of contents</div>
+    </main>
+  );
+};
+
+export default Home;
