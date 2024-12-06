@@ -1,6 +1,6 @@
 ## Hi there 😊
 
-This is a project created to study new technologies and good code practices
+This is a project created to study new technologies and code best practices
 
 ### Technologies
 
