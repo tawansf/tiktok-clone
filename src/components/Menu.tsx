@@ -100,17 +100,17 @@ const profiles = [
 const Menu = () => {
   usePathname();
   return (
-    <nav className="flex flex-col h-screen w-[15rem] px-[1.5rem] relative">
-      <div className="fixed">
-      <div className="h-[5rem] place-content-center text-center">
-        <Image src={Logo} alt="tiktok-logo" />
-      </div>
-      <div>
-        <Input
-          placeholder="Procurar"
-          className="rounded-full border-none bg-[#1f1f1f]"
-        />
-      </div>
+    <nav className="fixed h-[calc(100vh-theme(spacing.16))] w-64 overflow-y-auto px-[1.5rem]">
+      <div className="sticky">
+        <div className="h-[5rem] place-content-center text-center">
+          <Image src={Logo} alt="tiktok-logo" />
+        </div>
+        <div>
+          <Input
+            placeholder="Procurar"
+            className="rounded-full border-none bg-[#1f1f1f]"
+          />
+        </div>
       </div>
       {links.map((link, index) => {
         return (
@@ -130,13 +130,16 @@ const Menu = () => {
         );
       })}
       <Separator className="bg-[#616161]" />
-      <div className="">
-        <span className="text-[#616161] text-[14px] font-medium">
+      <div>
+        <span className="text-[#616161] text-[15px] font-semibold my-5">
           Contas que você segue
         </span>
         {profiles.map((item, index) => {
           return (
-            <div className="flex flex-row items-center justify-start gap-2 px-[.5rem] my-[5px]">
+            <div
+              className="flex flex-row items-center justify-start gap-2 px-[.5rem] my-[5px]"
+              key={index}
+            >
               <Image
                 src={item.path}
                 alt="following"
