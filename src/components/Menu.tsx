@@ -98,9 +98,9 @@ const profiles = [
   },
 ];
 const Menu = () => {
-  usePathname();
+  const pathName = usePathname();
   return (
-    <nav className="fixed h-[calc(100vh-theme(spacing.16))] w-64 overflow-y-auto px-[1.5rem]">
+    <nav className="fixed h-[calc(100vh-theme(spacing.16))] w-64 overflow-y-auto px-[1.5rem] scroll-m-0 scr">
       <div className="sticky">
         <div className="h-[5rem] place-content-center text-center">
           <Image src={Logo} alt="tiktok-logo" />
@@ -129,11 +129,11 @@ const Menu = () => {
           </div>
         );
       })}
-      <Separator className="bg-[#616161]" />
-      <div>
-        <span className="text-[#616161] text-[15px] font-semibold my-5">
-          Contas que você segue
-        </span>
+      <Separator className="bg-[#616161] my-[2rem]" />
+      <span className="text-[#616161] text-[15px] font-semibold my-0">
+        Contas que você segue
+      </span>
+      <div className="my-[1rem]">
         {profiles.map((item, index) => {
           return (
             <div
@@ -152,6 +152,18 @@ const Menu = () => {
             </div>
           );
         })}
+      </div>
+      <div className="flex flex-col items-start justify-between my-[1rem]">
+        <Link href="#" className="text-tiktokGreyLinks font-bold">
+          Empresa
+        </Link>
+        <Link href="#" className="text-tiktokGreyLinks font-bold">
+          Programas
+        </Link>
+        <Link href="#" className="text-tiktokGreyLinks font-bold">
+          Termos e Políticas
+        </Link>
+        <span className="text-tiktokGreyLinks font-bold">© 2024 TikTok</span>
       </div>
     </nav>
   );

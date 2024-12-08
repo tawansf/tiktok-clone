@@ -62,7 +62,8 @@ module.exports = {
   				'5': 'hsl(var(--chart-5))'
   			},
 			tiktokRed: "#fe2c55",
-			tiktokGrey: "#212121"
+			tiktokGrey: "#212121",
+			tiktokGreyLinks: "#7f7f7f"
   		},
   		borderRadius: {
   			lg: 'var(--radius)',
